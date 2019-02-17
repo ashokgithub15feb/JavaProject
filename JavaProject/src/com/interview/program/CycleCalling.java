@@ -1,4 +1,4 @@
-package com.durga.program;
+package com.interview.program;
 
 import java.io.IOException;
 
