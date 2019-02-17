@@ -1,4 +1,4 @@
-package com.durga.program;
+package com.durga.program.oops;
 
 
 //Identification of static member from top to bottom [1 to 6]

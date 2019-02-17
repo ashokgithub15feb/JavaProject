@@ -1,4 +1,4 @@
-package com.durga.program;
+package com.durga.program.oops;
 //package com.durga.program;
 //
 //public class TestStatic {
