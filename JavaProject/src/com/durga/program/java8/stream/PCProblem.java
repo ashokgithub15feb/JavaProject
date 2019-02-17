@@ -1,5 +1,8 @@
 package com.durga.program.java8.stream;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class PCProblem {
 
 	private static Integer I1;
@@ -16,10 +19,13 @@ public class PCProblem {
 
 			synchronized (PCProblem.I1) {
 
-				for(int i=0; i<I1; i++)
+				for(int i=0; i<=I1; i++)
 				{
 					if (i % 2 == 0) {
-						System.out.println("Even Number: " + i);
+						if(i != 0)
+						{
+							System.out.println("Even Number: " + i);
+						}
 						try {
 							I1.wait();
 						} catch (InterruptedException e) {
@@ -36,10 +42,13 @@ public class PCProblem {
 
 			synchronized (PCProblem.I1) {
 				
-				for(int i=0; i<I1; i++)
+				for(int i=0; i<=I1; i++)
 				{
 					if (i % 2 == 1) {
-						System.out.println("Odd Number: " + i);
+						if(i != 0)
+						{
+							System.out.println("Odd Number: " + i);
+						}
 						try {
 							I1.wait();
 						} catch (InterruptedException e) {
@@ -51,10 +60,11 @@ public class PCProblem {
 			}
 		};
 		
-		Thread t1 = new Thread(r1);
-		Thread t2 = new Thread(r2);
+		ExecutorService executorService = Executors.newFixedThreadPool(2);
+		executorService.execute(r1);
+		executorService.execute(r2);
 		
-		t1.start();
-		t2.start();
+		executorService.shutdown();
+		
 	}
 }
