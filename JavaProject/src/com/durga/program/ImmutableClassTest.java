@@ -1,4 +1,4 @@
-package com.interview.program;
+package com.durga.program;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package com.interview.program;
+package com.durga.program;
 
 
 //Identification of static member from top to bottom [1 to 6]
