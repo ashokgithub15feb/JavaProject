@@ -34,5 +34,11 @@ public class PrimeFactors {
     { 
         int n = 315; 
         primeFactors(n); 
+        
+        System.out.println("");
+        System.out.println(Math.sqrt(361));
+        
+        System.out.println(315%3);
+        System.out.println(35%3);
     } 
 }

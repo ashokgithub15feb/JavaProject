@@ -3,6 +3,8 @@ package com.durga.program.java8.stream;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -52,6 +54,8 @@ public class StreamDemo {
 		studMarks.add(15);
 		studMarks.add(90);
 		studMarks.add(25);
+		studMarks.add(25);
+		studMarks.add(25);
 		
 		System.out.println(studMarks);
 		//number of mailed student in list object
@@ -59,6 +63,10 @@ public class StreamDemo {
 		
 		System.out.println(noOfFailedStudents);
 		
+		Map<Integer, Long> collect3 = studMarks.stream().map(i -> i).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+		System.out.println("======================================================================+++++++++++++++++++++++++++++++++++++++++");
+		collect3.entrySet().forEach(System.out::println);
+		System.out.println("======================================================================+++++++++++++++++++++++++++++++++++++++++");
 		
 		System.out.println("=========================================");
 		

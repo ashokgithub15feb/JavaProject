@@ -26,8 +26,9 @@ public class ReverseOfStringDemo {
 		
 		removeWhiteSpace(input);
 		
+		System.out.println("=======================================");
 		findDuplicateChar(input);
-		
+		System.out.println("=======================================");
 		String randomStr = "Kumar Yadav Ashok";
 		checkAnagarm(input, randomStr );
 		
@@ -231,7 +232,8 @@ public class ReverseOfStringDemo {
 	private static void findDuplicateChar(String input) {
 
 		Stream<String> of = Stream.of(input);
-		Map<String, Long> collect = of.map(str -> str.replaceAll("\\s", "").split("")).flatMap(Arrays::stream).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+		Map<String, Long> collect = of.map(str -> str.replaceAll("\\s", "").split("")).flatMap(Arrays::stream)
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 	
 		collect.entrySet().forEach(System.out::println);
 		

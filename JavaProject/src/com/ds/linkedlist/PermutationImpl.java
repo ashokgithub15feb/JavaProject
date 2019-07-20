@@ -33,9 +33,14 @@ public class PermutationImpl {
 			for(int i=l;i<=r;i++)
 			{
 				str = swap(str, l,i);
+				
+				System.out.println("before str: "+str+"- L: "+l);
+				
 				permutation(str, l+1, r, CAT);
+				
 				str = swap(str, l,i);
 				
+				System.out.println("after str: "+str+"- L: "+l);
 			}
 		}
 	}
