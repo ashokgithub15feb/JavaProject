@@ -13,7 +13,7 @@ public class NumberOfOccurrences {
 		
 		Stream<String> of = Stream.of(s);
 		
-		of.map(str -> str.replaceAll("\\s", "").split("")).flatMap(Arrays::stream)
+		of.filter(st -> !st.trim().isEmpty()).map(str -> str.replaceAll("\\s", "").split("")).flatMap(Arrays::stream)
 		.collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().forEach(System.out::println);
 		
 	}

@@ -32,7 +32,6 @@ public class BinarySearchAlgo {
 		else {
 			System.err.println("Search Key Not Found.");
 		}
-		
 	}
 
 	private static int recBinarySearch(int key, int n) {

@@ -18,18 +18,19 @@ public class TestEmployee {
 		l.add(new Employee("Vinny", 124678));
 		
 		System.out.println(l);
-		
+		System.out.println("========================1");
 		Collections.sort(l, (e1, e2) -> (e1.getEno() < e2.getEno())?-1:(e1.getEno() > e2.getEno())?1:0);
 		
 		System.out.println(l);
-		
+		System.out.println("========================2");
 		Collections.sort(l, (e1, e2) -> e1.getName().compareTo(e2.getName()));
 		
 		System.out.println(l);
-		
+		System.out.println("========================3");
 		Stream<Employee> stream = l.stream();
 		
 		stream.forEach(System.out::println);
+		System.out.println("========================4");
 		
 	}
 }

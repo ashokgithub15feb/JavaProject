@@ -16,7 +16,7 @@ public class StreamFlatmapDemo {
 		l.add(40);
 		l.add(50);
 		System.out.println(l);
-		
+		System.out.println();
 		Function<Integer, Integer> f = i -> i*i;
 		l.stream().flatMap(i -> Stream.of(l)).forEach(System.out::println);;
 	}

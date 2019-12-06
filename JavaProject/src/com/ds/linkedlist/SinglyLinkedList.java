@@ -138,18 +138,6 @@ public class SinglyLinkedList {
 		list.sortLibkedList();
 		list.display();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
 

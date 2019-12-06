@@ -12,7 +12,7 @@ public class ReverseOfString {
 		System.out.println(input);
 		System.out.println(output);
 		
-		String s = s("ashok");
+		String s = s("ashok kumar");
 		System.out.println(s);
 	}
 

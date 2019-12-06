@@ -14,21 +14,21 @@ public class ReverseString {
 		String collect = Stream.of(s).map(str -> new StringBuilder(str).reverse()).collect(Collectors.joining());
 		
 		System.out.println(collect);
-		
+		System.out.println("---------------");
 		String collect1 = Stream.of(s).map(str -> str.split("")).flatMap(Arrays::stream).collect(Collectors.joining());
 		
 		System.out.println(collect1);
-		
+		System.out.println("---------------");
 		String reversed = s.chars()
 			    .collect(StringBuilder::new, (b,c) -> b.insert(0,(char)c), (b1,b2) -> b1.insert(0, b2))
 			    .toString();
 		
 		System.out.println(reversed);
-		
+		System.out.println("---------------");
 		String reversed1 = s.chars().mapToObj(c -> (char)c).reduce("", (s1,c) -> c+s1, (s1,s2) -> s2+s1);
 		
 		System.out.println(reversed1);
-		
+		System.out.println("---------------");
 		System.out.println();
 		char[] charArray = s.toCharArray();
 		

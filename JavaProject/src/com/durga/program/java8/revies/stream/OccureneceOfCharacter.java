@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.function.Function;
@@ -22,7 +25,15 @@ public class OccureneceOfCharacter {
 		flatMap.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
 			.entrySet().stream().forEach(System.out::println);
 		
-//		m1();
+		System.out.println("=================================");
+		
+		Stream.of(input).filter(filter -> !filter.isEmpty()).map(mapper -> mapper.trim().replaceAll("\\s", "").split(""))
+		.flatMap(Arrays::stream).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+		.entrySet().forEach(System.out::println);
+		
+		System.out.println("=================================");
+
+		//		m1();
 //		String s = null;
 //		System.out.println(s+"");
 //		System.out.println(null+"");

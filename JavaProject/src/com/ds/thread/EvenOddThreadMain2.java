@@ -17,7 +17,7 @@ public class EvenOddThreadMain2 {
 							if (i % 2 != 0) {
 								System.out.println(i);
 								
-								Thread.sleep(1000);
+								//Thread.sleep(1000);
 								
 								n.notify();
 							}
@@ -40,7 +40,7 @@ public class EvenOddThreadMain2 {
 							if (i % 2 == 0) {
 
 								System.out.println(i);
-								Thread.sleep(1000);
+								//Thread.sleep(1000);
 								n.notify();
 							}
 							n.wait();

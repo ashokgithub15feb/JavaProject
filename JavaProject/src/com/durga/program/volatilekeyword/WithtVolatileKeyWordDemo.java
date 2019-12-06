@@ -1,3 +1,4 @@
+
 package com.durga.program.volatilekeyword;
 
 public class WithtVolatileKeyWordDemo {
@@ -7,7 +8,10 @@ public class WithtVolatileKeyWordDemo {
 	    
 	    private static void method1() {
 	    	
-	           x++; y++;
+	    	synchronized (WithtVolatileKeyWordDemo.class) {
+				
+	    		x++; y++;
+			}
 	    }
 	    private static void method2() {
 	    	
@@ -33,8 +37,16 @@ public class WithtVolatileKeyWordDemo {
 	                  }
 	           };
 	           
-	           thread1.start();
-	           thread2.start();
+	           //thread1.start();
+	           //thread2.start();
+	           
+	           
+	           System.out.println("A".hashCode());
+	           
+	           System.out.println("AA".hashCode());
+	           System.out.println("aa".hashCode());
+	           
+	           
 	    }
 }
 

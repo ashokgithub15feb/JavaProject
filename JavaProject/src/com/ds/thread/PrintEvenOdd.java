@@ -22,7 +22,7 @@ public class PrintEvenOdd implements Runnable {
 				{ // wait for numbers other than remainder
 					try 
 					{
-						System.out.println("Reminber "+(num%2));
+						//System.out.println("Reminber "+(num%2));
 						lock.wait();
 					
 					} catch (InterruptedException e)

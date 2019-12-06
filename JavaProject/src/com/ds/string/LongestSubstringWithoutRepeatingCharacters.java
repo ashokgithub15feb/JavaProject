@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
-	static String input = "java2novice";
+	static String input = "java2novicie";
 	static Map<String, Integer> map = new HashMap<>();
 	static String distinct = "";
 	static int count = 0;
@@ -31,5 +31,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		}
 
 		System.out.println(distinct);
+		System.out.println(count);
+		System.out.println(j);
+		System.out.println(map);
+		
 	}
 }

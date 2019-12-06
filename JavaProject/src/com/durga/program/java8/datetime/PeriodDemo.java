@@ -9,7 +9,7 @@ public class PeriodDemo {
 		
 		LocalDate today = LocalDate.now();
 		System.out.println(today);
-		LocalDate birthday = LocalDate.of(1994, 10, 02);
+		LocalDate birthday = LocalDate.of(1987, 9, 15);
 		Period p = Period.between(birthday, today);
 		
 		System.out.printf("My Age is %d Years, %d Months, %d Days",p.getYears(),p.getMonths(),p.getDays());

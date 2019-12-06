@@ -10,7 +10,8 @@ public class LongestConsecutiveChar {
 		
 		for(int i=0; i<s.length();i++)
 		{
-			for(int j=i; j<s.length()-1;j++)
+			count = 0;
+			for(int j=0; j<s.length()-1;j++)
 			{
 				if(s.charAt(i) == s.charAt(j))
 				{
@@ -23,13 +24,11 @@ public class LongestConsecutiveChar {
 						max = count;
 						a = s.charAt(i);
 					}
-					break;
 				}
 			}
-			count = 0;
+			System.out.println("["+a+", "+max+"]");
 		}
 		
-		System.out.println("["+a+", "+max+"]");
 	}
 	
 	public static void main(String[] args) {

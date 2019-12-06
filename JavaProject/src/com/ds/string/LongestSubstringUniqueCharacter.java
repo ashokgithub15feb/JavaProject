@@ -22,6 +22,7 @@ public class LongestSubstringUniqueCharacter {
 			if(!set.contains(s.charAt(j)))
 			{
 				set.add(s.charAt(j));
+				
 				j++;
 				
 				maxLength = Math.max(maxLength, j-i);
@@ -33,7 +34,7 @@ public class LongestSubstringUniqueCharacter {
 			}
 		}
 		
-		set.stream().collect(Collectors.toSet()).forEach(System.out::print);
+		set.stream().collect(Collectors.toList()).forEach(System.out::print);
 		System.out.println();
 		System.out.println("Unique Characte is: "+set+" and String is: "+sb+" Max Length is: "+maxLength);
 	}

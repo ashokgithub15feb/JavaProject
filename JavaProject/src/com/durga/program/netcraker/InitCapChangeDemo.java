@@ -3,6 +3,7 @@ package com.durga.program.netcraker;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.print.DocFlavor.STRING;
 
@@ -42,11 +43,14 @@ public class InitCapChangeDemo {
 			String next = iterator2.next();
 			String st = next.substring(0, 1).toUpperCase();
 			String st1 = next.substring(1);
+			System.out.println(st1);
 			st = st+st1;
 			lst1.add(st);
 		}
 		System.out.println(lst1);
 		System.out.println();
+		
+		lst1.stream().map(st -> st.length()==6).collect(Collectors.toList()).forEach(System.out::println);
 		
 	}
 }
