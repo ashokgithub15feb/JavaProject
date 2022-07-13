@@ -1,7 +1,5 @@
 package com.ds.linkedlist;
 
-import org.omg.CORBA.Current;
-
 public class FindLoopLinkedList {
 
 	Node head;

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.omg.CORBA.UNKNOWN;
-
 public class UnModifiableListMethod {
 
 	public static void main(String[] args) {
