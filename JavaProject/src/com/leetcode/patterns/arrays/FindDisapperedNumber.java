@@ -8,11 +8,11 @@ public class FindDisapperedNumber {
 
 	public static void main(String[] args) {
 		
-		int[] nums = {4, 3,2, 7, 8, 2, 3, 1, 10, 10};
+		int[] nums = {4, 3, 2, 7, 8, 2, 3, 1, 10, 10};
 		
 		List<Integer> result = findDisapperedNumber(nums);
 		
-		System.out.println(result);
+		System.out.println("Result: "+result);
 	}
 
 	private static List<Integer> findDisapperedNumber(int[] nums) {
