@@ -67,6 +67,36 @@ public class ArrayStack {
 		return arr[top--];
 	}
 	
+	public void reverseOfStack()
+	{
+		if(len > 0)
+		{
+			int x = this.peek();
+			this.pop();
+			reverseOfStack();
+			
+			insertAtBottom(x);
+		}
+	}
+	
+	
+	private void insertAtBottom(int x) {
+		
+		if(this.isEmpty())
+		{
+			this.push(x);
+		}
+		else
+		{
+			int peekx = this.peek();
+			this.pop();
+			insertAtBottom(peekx);
+			
+			this.push(peekx);
+		}
+		
+	}
+
 	public void display()
 	{
 		System.out.print("\nStack = ");

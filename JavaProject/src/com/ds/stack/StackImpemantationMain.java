@@ -29,7 +29,8 @@ public class StackImpemantationMain {
 			System.out.println("4. check empty");
 			System.out.println("5. check full");
 			System.out.println("6. size");
-			System.out.println("7. no other oprtion");
+			System.out.println("7. Reverse Stack");
+			System.out.println("8. no other oprtion");
 			
 			int choise = scanner.nextInt();
 			
@@ -79,6 +80,10 @@ public class StackImpemantationMain {
 				
 			case 6:
 				System.out.println("Size: "+stack.getSize());
+				break;
+			case 7:
+				System.out.println("Reverse of Stack:");
+				stack.reverseOfStack();
 				break;
 				
 				default:
