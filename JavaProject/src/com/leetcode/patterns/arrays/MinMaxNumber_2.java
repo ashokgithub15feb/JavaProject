@@ -1,4 +1,4 @@
-package com.leetcode.patterns.iq.arrays;
+package com.leetcode.patterns.arrays;
 
 import java.util.Arrays;
 
@@ -8,9 +8,10 @@ public class MinMaxNumber_2 {
 		
 		int[] arr = {2,1,4,35,6,7,55,3};
 		
+		System.out.println(Arrays.toString(arr));
 		findMinMax(arr);
 		
-		System.out.println(Arrays.toString(arr));
+		
 	}
 
 	private static void findMinMax(int[] arr) {

@@ -1,4 +1,4 @@
-package com.leetcode.patterns.iq.arrays;
+package com.leetcode.patterns.arrays;
 
 import java.util.Arrays;
 
