@@ -11,7 +11,7 @@ public class LongestConsecutiveSequence {
 		
 		int result = longestConsSqe(nums);
 		
-		System.out.println(result);
+		System.out.println("Longest Consecutive Sequence: "+result);
 	}
 
 	private static int longestConsSqe(int[] nums) {

@@ -11,6 +11,8 @@ public class SetMatrixZero {
 						  {1,1,1}
 						  };
 		
+		//int[][] matrix = {{1,0,3}};
+		
 		System.out.println("Original Array: ");
 		
 		System.out.println(Arrays.toString(matrix[0]));
@@ -23,8 +25,13 @@ public class SetMatrixZero {
 		
 		boolean row = false, column = false;
 		
-		for(int i=0; i<n; i++) if(matrix[i][0] == 0) column = true;
-		for(int j=0; j<m; j++) if(matrix[0][j] == 0) row = true;
+		for(int i=0; i<n; i++) 
+			if(matrix[i][0] == 0) 
+				column = true;
+		
+		for(int j=0; j<m; j++) 
+			if(matrix[0][j] == 0) 
+				row = true;
 		
 		
 		for(int i=1; i<n; i++)
