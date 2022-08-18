@@ -7,7 +7,7 @@ public class IndexPairsOfAString {
 
 	static class Trie
 	{
-		boolean is;
+		boolean isEnd;
 		Trie[] ch = new Trie[26];
 	}
 	
@@ -56,7 +56,7 @@ public class IndexPairsOfAString {
 				
 				node = node.ch[ch - 'a'];
 				
-				if(node.is)
+				if(node.isEnd)
 				{
 					list.add(new int[] {i, j});
 				}
@@ -79,6 +79,6 @@ public class IndexPairsOfAString {
 			
 			root = root.ch[ch - 'a'];
 		}
-		root.is = true;
+		root.isEnd = true;
 	}
 }
