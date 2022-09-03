@@ -320,6 +320,64 @@ public class LinkedListCycle {
         
         return dummy.next;
     }
+	
+	public Node sortList(Node start)
+	{
+		if(start == null || start.next == null)
+			return start;
+		
+		Node mid = middleNode(start);
+		Node leftNode = sortList(start);
+		Node rightNode = sortList(mid);
+		
+		Node mergedNode = merge(leftNode, rightNode);
+		
+		return mergedNode;
+	}
+
+	private Node merge(Node leftNode, Node rightNode) {
+		
+		Node dummy = new Node(0);
+		Node curr = dummy;
+		
+		while(leftNode != null && rightNode != null)
+		{
+			if(leftNode.val <= rightNode.val)
+			{
+				curr.next = leftNode;
+				leftNode = leftNode.next;
+			}
+			else
+			{
+				curr.next = rightNode;
+				rightNode = rightNode.next;
+			}
+			
+			curr = curr.next;
+		}
+		
+		curr.next = leftNode != null ? leftNode : rightNode;
+		
+		return dummy.next;
+	}
+
+	private Node middleNode(Node start) {
+		
+		Node slow = start;
+		Node fast = start.next;
+		
+		while(fast != null && fast.next != null)
+		{
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		
+		Node mid = slow.next;
+		
+		slow.next = null;
+		
+		return mid;
+	}
 
 	public static void main(String[] args) {
 
