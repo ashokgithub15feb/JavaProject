@@ -379,6 +379,44 @@ public class LinkedListCycle {
 		return mid;
 	}
 
+	public void reorderLinkedList(Node start)
+	{
+		Node slow = start;
+		Node fast = start;
+		
+		while(fast != null && fast.next != null)
+		{
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		
+		Node prev = null;
+		Node curr = slow;
+		Node temp = null;
+		
+		while(curr != null)
+		{
+			temp = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = temp;
+		}
+		
+		Node n1 = start;
+		Node n2 = prev;
+		
+		while(n2.next != null)
+		{
+			temp = n1.next;
+			n1.next = n2;
+			n1 = temp;
+			
+			temp = n2.next;
+			n2.next = n1;
+			n2 = temp;
+		}
+	}
+	
 	public static void main(String[] args) {
 
 		LinkedListCycle ll = new LinkedListCycle();
@@ -386,7 +424,7 @@ public class LinkedListCycle {
 		
 		ll.addFirstNode(1);
 		ll.addLastNode(2);
-		ll.addLastNode(2);
+		ll.addLastNode(0);
 		ll.addLastNode(1);
 		//ll.addLastNode(5);
 		
@@ -404,6 +442,18 @@ public class LinkedListCycle {
 		
 		//Node removedNode = ll.removedNode(ll.start, 2);
 		//ll.start = removedNode;
+		ll.printList();
+		
+		Node sortList = ll.sortList(ll.start);
+		
+		ll.start = sortList;
+		ll.printList();
+		
+		ll.addFirstNode(12);
+		ll.addFirstNode(23);
+		ll.printList();
+		
+		ll.reorderLinkedList(ll.start);
 		ll.printList();
 		
 		//--------------------
