@@ -1,7 +1,5 @@
 package com.leetcode.patterns.fastandslowpointer;
 
-import com.leetcode.patterns.fastandslowpointer.LinkedListCycle.Node;
-
 public class LinkedListCycle {
 
 	Node start;
