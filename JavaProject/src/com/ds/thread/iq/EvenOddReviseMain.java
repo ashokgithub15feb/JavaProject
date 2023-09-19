@@ -1,4 +1,4 @@
-package com.ds.thread;
+package com.ds.thread.iq;
 
 public class EvenOddReviseMain {
 

@@ -27,6 +27,10 @@ public class Merge2SortedArrays {
 				
 				//check after swap arr2 is sorted?
 				checkArray2Sorted(arr2);
+				System.out.println("========");
+				System.out.println(Arrays.toString(arr1));
+				System.out.println(Arrays.toString(arr2));
+				System.out.println("========");
 			}
 			i++;
 		}

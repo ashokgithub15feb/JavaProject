@@ -10,19 +10,6 @@ public class LongestPalindromicSubString {
 		
 		System.out.println(result);
 		
-		//String _ = "a";
-		//System.out.println(_);
-		
-		int _ = 10;
-		System.out.println(_);
-		
-		//int $= 10;
-		//System.out.println($);0000
-		
-		String $= "10";
-		System.out.println($);
-		
-		
 	}
 
 	private static String findPalindromicSubString(String s) {
@@ -34,7 +21,7 @@ public class LongestPalindromicSubString {
 		{
 			int len1 = expendFromCenter(s, i, i+1);
 			int len2 = expendFromCenter(s, i, i);
-			
+			System.out.println("==========================================");
 			int len = Math.max(len1, len2);
 			
 			if(end - start < len)
@@ -49,12 +36,12 @@ public class LongestPalindromicSubString {
 
 	private static int expendFromCenter(String s, int i, int j) {
 		
+		System.out.println("S: "+s+", i: "+i+", j: "+j);
 		while(i>= 0 && j < s.length() && s.charAt(i) == s.charAt(j))
 		{
 			i--;
 			j++;
 		}
-		
 		return j - i - 1;
 	}
 }

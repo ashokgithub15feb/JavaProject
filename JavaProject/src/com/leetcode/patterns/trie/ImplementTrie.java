@@ -28,7 +28,7 @@ public class ImplementTrie {
 		
 		for(String word : words)
 		{
-			System.out.println("Insert Word "+word);
+			System.out.println("Insert Word:  "+word);
 			implementTrie.insert(word);
 		}
 		System.out.println("==========================================");

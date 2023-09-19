@@ -15,6 +15,11 @@ public class NonOverlappingIntervals {
 		int result = eraseOverlapIntervals(intervals);
 		
 		System.out.println("Minimum Number overalpping count is: "+result);
+		
+		int result2 = eraseOverlapIntervals2(intervals);
+		
+		System.out.println("Minimum Number overalpping count is: "+result2);
+		
 	}
 
 	private static int eraseOverlapIntervals(int[][] intervals) {
@@ -43,6 +48,33 @@ public class NonOverlappingIntervals {
 				count +=1;
 				left = right;
 				right +=1;
+			}
+		}
+		
+		return count;
+	}
+	
+	private static int eraseOverlapIntervals2(int[][] intervals) {
+		
+		int count = 0;
+		int n = intervals.length;
+		int prev = 0;
+		
+		for(int current = 1; current < n; current++)
+		{
+			//Overlapping
+			if(intervals[current][0] < intervals[prev][1])
+			{
+				count++;
+				
+				if(intervals[current][1] <= intervals[prev][1])
+				{
+					prev = current;
+				}
+			}
+			else //Non-Overlapping
+			{
+				prev = current;
 			}
 		}
 		
