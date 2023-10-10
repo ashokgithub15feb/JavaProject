@@ -26,7 +26,9 @@ public class DuplicateNumber {
 		{
 			int index = Math.abs(nums[i]);
 			
-			if(nums[index] < 0 ) return index;
+			if(nums[index] < 0 ) {
+				return index;
+			}
 			
 //			nums[index] = -nums[index];
 			nums[index] = -Math.abs(nums[index]);

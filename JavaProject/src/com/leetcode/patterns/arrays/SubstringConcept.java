@@ -10,6 +10,7 @@ public class SubstringConcept {
 		System.out.println(s);
 		s = s.substring(1);
 		System.out.println(s);
+		s = "hamburger";
 		s = s.substring(1);
 		System.out.println(s);
 	}

@@ -4,7 +4,7 @@ public class FirstMissingPositive {
 
 	public static void main(String[] args) {
 		
-		int[] nums = {9, 12, 4, 1, 2, -1, 8};
+		int[] nums = {9, 12, 4, 1, 2,3, -1, 8};
 		
 		int result = firstMissingPositive(nums);
 		
@@ -37,7 +37,8 @@ public class FirstMissingPositive {
 		for(int i =0; i<n; i++)
 		{
 			int index = Math.abs(nums[i]);
-			nums[index-1] = -Math.abs(nums[index-1]);
+			int id = nums[index-1];
+			nums[index-1] = -Math.abs(id);
 		}
 		//step 3: find out smallest missing positive number
 		for(int i=0; i<n; i++)

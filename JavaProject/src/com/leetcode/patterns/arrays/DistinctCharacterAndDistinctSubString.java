@@ -7,8 +7,8 @@ public class DistinctCharacterAndDistinctSubString {
 
 	public static void main(String[] args) {
 
-		String s = "LEETCODE";
-		//String s = "ABA";
+		//String s = "LEETCODE";
+		String s = "ABA";
 		int result = findDistinctCharacterAndDistinctSubString(s);
 
 		System.out.println(result);// 18

@@ -8,7 +8,7 @@ public class StringRev {
 
 		String str = "Ashok Kumar Yadav";
 
-		revOfWords(str);
+		//revOfWords(str);
 		revOfWords1(str);
 		
 	}
@@ -17,12 +17,6 @@ public class StringRev {
 		String s1 = "";
 		
 		char[] ch = new char[str.length()];
-		char[] ch1 = new char[str.length()];
-		
-		for(int i=0; i<str.length(); i++)
-		{
-				
-		}
 		
 		System.out.println(Arrays.toString(ch));
 		
