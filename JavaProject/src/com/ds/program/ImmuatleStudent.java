@@ -13,8 +13,9 @@ public final class ImmuatleStudent {
 	private final String country;
 	private final Date date = new Date();
 	private final Map<String, String> map;
+	private final Address address;
 	
-	public ImmuatleStudent(String name, String country, Map<String, String> map)
+	public ImmuatleStudent(String name, String country, Map<String, String> map, Address address)
 	{
 		this.name = name;
 		this.country = country;
@@ -25,17 +26,9 @@ public final class ImmuatleStudent {
 		{
 			this.map.put(entry.getKey(), entry.getValue());
 		}
-		
+		Address address2 = new Address(address.getAddressId(), address.getSipCode(), address.getCity());
+		this.address = address2;
 	}
-	
-//	public ImmuatleStudent(String name, String country)//compile time error - if any class declared as a final then constructor should me initilized 
-//	{
-//		this.name = name;
-//		this.country = country;
-//	}
-
-	
-
 	
 	public String getName() {
 		return name;
@@ -51,6 +44,10 @@ public final class ImmuatleStudent {
 
 	public Map<String, String> getMap() {
 		return map;
+	}
+
+	public Address getAddress() {
+		return address;
 	}
 	
 	

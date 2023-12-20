@@ -29,7 +29,7 @@ public class EvenOddUsingTwoThead implements Runnable {
 	@Override
 	public void run() {
 
-		while (num < MAX) 
+		while (true) 
 		{
 			synchronized (lock)
 			{
@@ -47,7 +47,8 @@ public class EvenOddUsingTwoThead implements Runnable {
 				}
 				System.out.println(num);
 				num++;
-				lock.notifyAll();
+				
+				lock.notify();
 			}
 		}
 	}

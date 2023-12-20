@@ -12,7 +12,8 @@ public class LRUCacheImpl<K, V> extends LinkedHashMap<K, V> {
 	 */
 	private static final long serialVersionUID = -1449779896387348865L;
 	private static int capacity;
-	
+	static boolean accessOrder = true;
+	static float loadFactor = 0.75f;
 	
 	/**
 	 *  int initialCapacity,
@@ -21,7 +22,7 @@ public class LRUCacheImpl<K, V> extends LinkedHashMap<K, V> {
 	 * @param capacity
 	 */
 	private LRUCacheImpl(int size) {
-		super(size, 0.75f, true);
+		super(size, loadFactor, accessOrder);
 		capacity = size;
 		
 	}

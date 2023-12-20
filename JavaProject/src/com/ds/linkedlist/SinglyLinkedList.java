@@ -613,13 +613,19 @@ class LinkedListImpl
 		if(start == null)
 		{
 			start = null;
-			end = null;
+			//end = null;
 		}
 		//if contain the insert at end of the linked list
 		else
 		{
-			end.link = nptr;
-			end = nptr;
+			Node f = start;
+			Node s = start;
+			while(f != null && s != null) {
+				s = f;
+				f = f.link;
+			}
+			s.link = nptr;
+			//start = nptr;
 		}
 	}
 	

@@ -4,10 +4,11 @@ public class FibonacciSeries2 {
 
 	public static void main(String[] args) {
 		
-		int n = 5;
-		
-		int result = fib(n);
-		System.out.println(result);
+		int n = 11;
+		for(int i = 0; i < n; i++) {
+			int result = fib(i);
+			System.out.println(result);
+		}
 	}
 
 	private static int fib(int n) {

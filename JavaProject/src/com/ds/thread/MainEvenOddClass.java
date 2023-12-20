@@ -21,7 +21,7 @@ class EvenOddTask implements Runnable {
 	@Override
 	public void run() {
 		int number = isEvenNumber ? 2 : 1;
-		while (number <= max) {
+		while (true) {
 			if (isEvenNumber) {
 				print.printEven(number);
 			} else {

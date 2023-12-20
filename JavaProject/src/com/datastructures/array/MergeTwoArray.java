@@ -7,7 +7,7 @@ public class MergeTwoArray {
 	public static void main(String[] args) {
 		
 		int[] a = {3, 8, 16, 20, 25};
-		int[] b = {4, 10, 12, 22, 23};
+		int[] b = {4, 10, 12, 22, 23, 28, 30};
 		int[] c = new int[a.length+b.length];
 		
 		mergeTwoArray(a, b, c);
