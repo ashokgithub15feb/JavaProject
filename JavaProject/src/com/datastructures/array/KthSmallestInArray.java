@@ -10,7 +10,7 @@ public class KthSmallestInArray {
 		
 		int arr[] = { 1, 4, 5, 3, 19, 3 };
         int k = 3;
-         //data
+         //data1111
         int result = kthSmallest(arr, k);
         System.out.println(result);
         
