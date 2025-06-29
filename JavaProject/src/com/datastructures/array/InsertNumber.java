@@ -18,7 +18,7 @@ public class InsertNumber {
 				.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
 				.entrySet().stream().filter(e -> e.getValue() > 1).map(Map.Entry::getKey).findFirst();
 		if (res.isPresent()) {
-			System.out.println(res.get());
+			//System.out.println(res.get());
 		}
 	}
 }

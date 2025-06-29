@@ -158,6 +158,17 @@ public class Java8FeaturesEmployee {
 							      .getSalary();
 		System.out.println("2nd Max Employee Salary = " + salary2);
 		
+		employees.stream().sorted(Collections.reverseOrder(Comparator.comparingDouble(Employee::getSalary))).forEach(System.out::println);
+		
+		System.out.println("=2nd Salary of Employee?=");
+		double salary22 = employees.stream()
+							      .sorted(Comparator.comparing(Employee::getSalary))
+							      .skip(3)
+							      .findFirst()
+							      .get()
+							      .getSalary();
+		System.out.println("2nd Max Employee Salary salary22 = " + salary22);
+		
 		System.out.println("=Sort the Employee with multipal fields - Age, Salary and Name?=");
 		Collections.sort(employees, Comparator.comparing(Employee::getAge)
 											  .thenComparing(Employee::getSalary)
@@ -234,6 +245,13 @@ public class Java8FeaturesEmployee {
 										   .collect(Collectors.toList());
 		System.out.println(collect3);
 		
+
+		System.out.println("=having less the 3rd max salary?=");
+		Employee collect33 = employees.stream().sorted(Collections.reverseOrder(Comparator.comparing(Employee::getSalary)))
+				.skip(3).findFirst().get();
+		System.out.println(collect33);
+		
+		
 		System.out.println("=Max Salay of Employee=");
 		double salary = employees.stream()
 								 .collect(Collectors.maxBy(Comparator.comparing(Employee::getSalary)))
@@ -267,7 +285,7 @@ public class Java8FeaturesEmployee {
 		Integer integer = m.get(ee1); // null
 		System.out.println(integer);
 
-		System.out.println("=2nd max salary of employee n each department?=");
+		System.out.println("=2nd max salary of employee in each department?=");
 		
 		Map<String, List<Employee>> emp2 = employees.stream()
 									   .collect(Collectors.groupingBy(Employee::getDepartment));
