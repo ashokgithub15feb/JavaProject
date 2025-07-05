@@ -15,10 +15,12 @@ public class NamesOfAllEmployeesInEachDepartment {
 		Map<String, List<Employee>> map = ListOfEmployee.getListOfEmployee().stream()
 				.collect(Collectors.groupingBy(Employee::getDepartment));
 
-		Stream<List<Employee>> map2 = ListOfEmployee.getListOfEmployee().stream().collect(Collectors.groupingBy(Employee::getDepartment)).entrySet()
-				.stream().map(emp -> emp.getValue());
+		System.out.println(map);
 		
-//		List<Employee> collect = map2.flatMap(f -> f.stream()).collect(Collectors.toList());
-//		collect.stream().collect(Collectors.groupingBy(Employee::getName, Collectors.joining(",")));
+		
+		Map<String, List<String>> map3 = ListOfEmployee.getListOfEmployee().stream().collect(Collectors
+				.groupingBy(Employee::getDepartment, Collectors.mapping(Employee::getName, Collectors.toList())));
+
+		System.out.println(map3);
 	}
 }
