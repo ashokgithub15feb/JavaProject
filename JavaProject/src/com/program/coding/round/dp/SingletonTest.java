@@ -11,5 +11,7 @@ public class SingletonTest {
 		System.out.println(instance1);
 		
 		System.out.println(instance == instance1);
+		System.out.println(instance.hashCode());
+		System.out.println(instance1.hashCode());
 	}
 }
