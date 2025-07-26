@@ -27,6 +27,9 @@ public class SortThePeople {
 		for (int i = 0; i < name.length; i++) {
 
 			map.put(height[i], name[i]);
+			map.put(11111, "abccc");
+			String put = map.put(11111, "dddddd");
+			System.out.println("Map: "+map+", Put: "+put);
 		}
 
 		Arrays.sort(height);

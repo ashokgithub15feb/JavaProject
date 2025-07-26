@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class ContainDuplicate {
+public class ContainDuplicate { 
 
 	public static void main(String[] args) {
 		

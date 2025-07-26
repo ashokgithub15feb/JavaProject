@@ -5,6 +5,9 @@ public class CircularSentence {
 	public static void main(String[] args) {
 
 		String sentence = "leetcode exercises sound delightful";
+		//String sentence = "6leetcode exercises sound delightful";
+		//String sentence = "leetcode";
+		//String sentence = "leetcodel";
 
 		boolean result = isCircularSentence(sentence);
 
@@ -26,8 +29,7 @@ public class CircularSentence {
 		for (int i = 0; i < sentence.length(); i++) {
 			char ch = sentence.charAt(i);
 
-			if (!Character.isLetter(ch) && sentence.charAt(i - 1) != sentence.charAt(i + 1)
-					|| sentence.charAt(0) != sentence.charAt(sentence.length() - 1)) {
+			if (!Character.isLetter(ch) && sentence.charAt(0) != sentence.charAt(sentence.length() - 1)) {
 				return false;
 			}
 		}
