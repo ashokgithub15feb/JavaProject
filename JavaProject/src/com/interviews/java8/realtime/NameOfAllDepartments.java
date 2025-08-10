@@ -10,7 +10,8 @@ public class NameOfAllDepartments {
 
 	public static void main(String[] args) {
 		
-		List<String> map = ListOfEmployee.getListOfEmployee().stream().map(Employee::getDepartment).distinct().collect(Collectors.toList());
+		List<String> map = ListOfEmployee.getListOfEmployee().stream()
+				.map(Employee::getDepartment).distinct().collect(Collectors.toList());
 			
 		System.out.println(map);
 	}

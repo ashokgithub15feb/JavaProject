@@ -10,7 +10,8 @@ public class AverageSalaryOfEachDepartment {
 	public static void main(String[] args) {
 
 		Map<String, Double> map = ListOfEmployee.getListOfEmployee().stream().collect(
-				Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
+				Collectors.groupingBy(Employee::getDepartment, 
+						Collectors.averagingDouble(Employee::getSalary)));
 		
 		System.out.println(map);
 	}

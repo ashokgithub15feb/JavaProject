@@ -9,7 +9,8 @@ public class MaleAndFemaleEmployeesInSales {
 
 	public static void main(String[] args) {
 
-		Map<String, Long> map = ListOfEmployee.getListOfEmployee().stream().filter(f -> f.getDepartment().equals("Sales And Marketing"))
+		Map<String, Long> map = ListOfEmployee.getListOfEmployee().stream()
+				.filter(f -> f.getDepartment().equals("Sales And Marketing"))
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
 		
 		System.out.println(map);

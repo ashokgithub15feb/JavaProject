@@ -10,7 +10,8 @@ public class AverageSalaryOfMaleAndFemaleEmployee {
 	public static void main(String[] args) {
 
 		Map<String, Double> map = ListOfEmployee.getListOfEmployee().stream()
-				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
+				.collect(Collectors.groupingBy(Employee::getGender, 
+						Collectors.averagingDouble(Employee::getSalary)));
 		
 		System.out.println(map);
 	}
