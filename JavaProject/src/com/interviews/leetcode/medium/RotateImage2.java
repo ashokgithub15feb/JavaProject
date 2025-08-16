@@ -16,10 +16,10 @@ public class RotateImage2 {
 
 		int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-		print(matrix);
+		//print(matrix);
 		System.out.println();
 		rotateImage(matrix);
-		print(matrix);
+		//print(matrix);
 
 	}
 
@@ -36,6 +36,8 @@ public class RotateImage2 {
 				int temp = matrix[i][j];
 				matrix[i][j] = matrix[j][i];
 				matrix[j][i] = temp;
+				print(matrix);
+				System.out.println();
 			}
 		}
 	}
@@ -51,6 +53,9 @@ public class RotateImage2 {
 				matrix[i][right] = temp;
 				left++;
 				right--;
+				System.out.println("==========");
+				print(matrix);
+				System.out.println();
 			}
 		}
 	}

@@ -8,9 +8,9 @@ public class CountingSort7 {
 
 	public static void main(String[] args) {
 
-		//int[] nums = { 5, 1, 1, 2, 0, 0 };
+		int[] nums = { 5, 1, 1, 2, 0, 0 };
 
-		int[] nums = { 0, 1, 1, 0, 0, 0 };
+		//int[] nums = { 0, 1, 1, 0, 0, 0 };
 
 		
 		int[] result = countingSort(nums);

@@ -6,9 +6,9 @@ public class ArrayRotation
 {
 	public static void main(String[] args)
 	{
-//		int[] arr = {1,2,3,4,5,6,7};
-		int[] arr = {-1,-100,3,99};
-		int rt = 2;
+		int[] arr = {1,2,3,4,5,6,7};
+		//int[] arr = {-1,-100,3,99};
+		int rt = 3;
 		int arrSize = arr.length;
 		System.out.println("Before Rotation: "+Arrays.toString(arr));
 		leftRotate(arr, rt, arrSize);

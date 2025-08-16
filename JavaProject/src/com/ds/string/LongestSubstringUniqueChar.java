@@ -7,7 +7,9 @@ public class LongestSubstringUniqueChar {
 
 	public static void main(String[] args) {
 		
-		String s = "pwwkew";
+		//String s = "pwwkew";
+		String s = "abcdecbeadf";
+		
 		LinkedHashSet<Character> set = new LinkedHashSet<>();
 		
 		int maxLength = 0;

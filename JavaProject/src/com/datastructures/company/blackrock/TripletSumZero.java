@@ -7,7 +7,8 @@ public class TripletSumZero {
 
 	public static void main(String[] args) {
 		
-		int[] arr = {10, 3, -4, 1, -6, 9};
+//		int[] arr = {10, 3, -4, 1, -6, 9};
+		int[] arr = {-1,1,2,-1,-4,0};
 		int n = arr.length;
 		
 		tripletSumZero(arr, n);

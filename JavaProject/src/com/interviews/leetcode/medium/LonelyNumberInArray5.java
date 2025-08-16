@@ -1,9 +1,12 @@
 package com.interviews.leetcode.medium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class LonelyNumberInArray5 {
 
@@ -14,6 +17,23 @@ public class LonelyNumberInArray5 {
 		List<Integer> result = lonelyNumber(nums);
 
 		System.out.println("Result: " + result);
+
+		List<Integer> result1 = lonelyNumberUsingStream(nums);
+		System.out.println("Result1: " + result1);
+
+	}
+
+	private static List<Integer> lonelyNumberUsingStream(int[] nums) {
+
+		Map<Integer, Long> collect = Arrays.stream(nums).boxed()
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		List<Integer> collect2 = collect.entrySet().stream()
+				.filter(entry -> entry.getValue() == 1
+						&& !(collect.containsKey(entry.getKey() + 1) || collect.containsKey(entry.getKey() - 1)))
+				.map(key -> key.getKey()).collect(Collectors.toList());
+
+		return collect2;
 	}
 
 	private static List<Integer> lonelyNumber(int[] nums) {

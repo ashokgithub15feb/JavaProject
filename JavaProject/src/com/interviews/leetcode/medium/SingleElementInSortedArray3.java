@@ -19,7 +19,7 @@ public class SingleElementInSortedArray3 {
 
 		//int[] nums = { 1, 1, 2, 3, 3, 4, 4, 8, 8 };
 		
-		int[] nums = { 1, 1, 2, 2, 3, 3, 4, 8, 8 };
+		int[] nums = { 1, 1, 2, 2, 3, 3, 4, 5, 5 };
 
 		int result = singleElementInSortedArray(nums);
 
@@ -48,4 +48,5 @@ public class SingleElementInSortedArray3 {
 
 		return nums[left];
 	}
-}
+
+   }

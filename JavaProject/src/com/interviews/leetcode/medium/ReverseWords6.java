@@ -10,8 +10,8 @@ public class ReverseWords6 {
 		
 		System.out.println("Input: "+s);
 		
-		//String result = reverseWords(s);
-		//System.out.println("Result: "+result);
+		String result = reverseWords(s);
+		System.out.println("Resulto: "+result);
 		
 		String result2 = reverseWords2(s);
 		System.out.println("Result: "+result2+":"+result2.length()+", s: "+s.length());
@@ -67,7 +67,6 @@ public class ReverseWords6 {
 			left++;
 			right--;
 		}
-		
-		return Arrays.toString(words);
+		return Arrays.toString(words).replaceAll(",", "");
 	}
 }
