@@ -66,7 +66,15 @@ public class RevisionJava8Problems {
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
 				.filter(e -> e.getValue() > 1).map(d -> d.getKey()).collect(Collectors.toList());
 		System.out.println(collect);
-
+		
+		List<Integer> collect6 = IntStream.of(arr).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+		.entrySet().stream().filter(entry -> entry.getValue() > 1).map(key -> key.getKey()).collect(Collectors.toList());
+		
+		System.out.println(collect6);
+		
+		
+		
+		
 		System.out.println("======8=====");
 		List<Integer> collect2 = Arrays.stream(arr).mapToObj(m -> m)
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()

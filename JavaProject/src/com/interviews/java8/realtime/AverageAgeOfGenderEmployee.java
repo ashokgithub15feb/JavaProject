@@ -10,7 +10,8 @@ public class AverageAgeOfGenderEmployee {
 	public static void main(String[] args) {
 
 		Map<String, Double> map = ListOfEmployee.getListOfEmployee().stream()
-				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
+				.collect(Collectors.groupingBy(Employee::getGender, 
+						Collectors.averagingInt(Employee::getAge)));
 		
 		System.out.println(map);
 	}

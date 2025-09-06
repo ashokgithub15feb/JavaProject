@@ -1,6 +1,7 @@
 package com.interviews.java8;
 
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -29,5 +30,15 @@ public class FindFirstRepeatedCharacter {
 		Character character = collect.entrySet().stream().filter(f -> f.getValue() > 1).map(entryy -> entryy.getKey()).findFirst().get();
 		
 		System.out.println("First Repeted Character: "+character);
+		
+		Character key = inputString.replaceAll("\\s", "").toLowerCase()
+		.chars()
+		.mapToObj(c -> (char) c)
+		.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+		.entrySet()
+		.stream()
+		.max(Map.Entry.comparingByValue()).get().getKey();
+		
+		System.out.println(key);
 	}
 }

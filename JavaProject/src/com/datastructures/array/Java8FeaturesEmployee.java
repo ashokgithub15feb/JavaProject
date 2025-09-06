@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -315,6 +316,14 @@ public class Java8FeaturesEmployee {
 //			  .getSalary();
 //			System.out.println("Key = "+entry.getKey()+", Value = "+salary3);
 //		}
+		
+		System.out.println("lllllllllllllllllllllll");
+		
+		Map<String, Employee> collect5 = employees.stream()
+		.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)), Optional::get)));
+		System.out.println(collect5);
+		System.out.println(collect5.size());
+		collect5.entrySet().stream().forEach(f -> System.out.println(f.getKey()+": "+f.getValue()));
 	}
 
 	private static void forEachBooleanListOfEmployee(Entry<Boolean, List<Employee>> f) {

@@ -3,6 +3,7 @@ package com.interviews.coding;
 import java.util.LinkedHashMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class FirstDuplicateInArray {
@@ -31,8 +32,9 @@ public class FirstDuplicateInArray {
 	}
 
 	private static void firstDupplicate(int[] arr) {
-
-		Stream.of(1, 6, 2, 3, 4, 5, 6, 7, 3, 1)
+		
+		IntStream.of(arr).boxed()
+		//Stream.of(1, 6, 2, 3, 4, 5, 6, 7, 3, 1)
 				.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
 				.entrySet()
 				.stream()

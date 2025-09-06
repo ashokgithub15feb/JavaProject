@@ -2,6 +2,9 @@ package com.interviews.leetcode.medium;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class KDiffPairsInArray4 {
 
@@ -19,8 +22,22 @@ public class KDiffPairsInArray4 {
 		
 		System.out.println("====================");
 		
+		kDiffPairsg(nums, k);
+
 	}
 
+	private static void kDiffPairsg(int[] nums, int k) {
+		
+		Map<Integer, Long> collect = IntStream.of(nums).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+		
+		long count = collect.keySet().stream()
+			    .filter(num -> (k > 0 && collect.containsKey(num + k)) || (k == 0 && collect.get(num) > 1))
+			    .count();
+		
+		System.out.println(count);
+		
+		
+	}
 	private static int kDiffPairs(int[] nums, int k) {
 
 		Map<Integer, Integer> map = new HashMap<>();
@@ -32,8 +49,8 @@ public class KDiffPairsInArray4 {
 			}
 		}
 
-		int count = 0;
 		System.out.println(map);
+		int count = 0;
 		for (int num : map.keySet()) {
 			if (k > 0 && map.containsKey(num + k)) {
 				count++;

@@ -21,10 +21,15 @@ public class DuplicateCharacters {
 
 		Set<Character> set = new HashSet<Character>();
 
-		List<Entry<Character, Long>> collect = map.entrySet().stream().filter(f -> f.getValue() >= 2)
+		List<Entry<Character, Long>> collect = map.entrySet().stream().filter(f -> f.getValue() > 1)
 				.collect(Collectors.toList());
+		
+		List<Character> collect2 = map.entrySet().stream().filter(f -> f.getValue() > 1).map(k -> k.getKey()).collect(Collectors.toList());
+		System.out.println(collect2);
 
 		System.out.println(collect);
+		//[a=3, c=2, t=2, e=2, o=2]
+		//[a=3, c=2, t=2, e=2, o=2]
 
 	}
 }
