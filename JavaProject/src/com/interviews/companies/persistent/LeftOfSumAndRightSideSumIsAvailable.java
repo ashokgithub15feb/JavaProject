@@ -9,6 +9,23 @@ public class LeftOfSumAndRightSideSumIsAvailable {
 		int index = patternMatching(nums);
 		
 		System.out.println(index);
+		
+		System.out.println(hash("Ashok") % 16);
+		
+		
+		System.out.println();
+		
+		int a = 21;        // binary: 0001 0101
+		int b = a << 2;    // shift left by 2 bits: 0101 0100 (84 decimal)
+		System.out.println(b); // Prints 84
+		
+		int aa = 21;        // binary: 0001 0101
+		int bb = aa >> 2;    // shift right by 2 bits: 0000 0101 (5 decimal)
+		System.out.println(bb); // Prints 5
+		
+		int aaa = 21;        // binary: 0001 0101
+		int bbb = aaa >>> 2;    // shift left by 2 bits: 0000 0101 (5 decimal)
+		System.out.println(bbb); // Prints 5
 	}
 
 	private static int patternMatching(int[] nums) {
@@ -51,5 +68,10 @@ public class LeftOfSumAndRightSideSumIsAvailable {
 		}
 		
 		return -1;
+	}
+	
+	static final int hash(Object key) {
+	    int h;
+	    return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
 	}
 }

@@ -26,7 +26,6 @@ public class MaximumSubarraySum {
 			}else {
 				sum = sum + nums[i];
 			}
-			
 			maxSum = Math.max(sum, maxSum);
 		}
 		

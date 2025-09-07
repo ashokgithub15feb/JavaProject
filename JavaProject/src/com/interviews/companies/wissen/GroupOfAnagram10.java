@@ -1,4 +1,4 @@
-package com.interviews.leetcode.medium;
+package com.interviews.companies.wissen;
 
 import java.util.ArrayList;
 import java.util.Arrays;

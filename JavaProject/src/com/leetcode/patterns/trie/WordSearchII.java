@@ -1,6 +1,7 @@
 package com.leetcode.patterns.trie;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -29,9 +30,18 @@ public class WordSearchII {
 					curr.childreen[ch - 'a'] = new Trie();
 				}
 				curr = curr.childreen[ch - 'a'];
+				
+				System.out.println(toString());
 			}
 			curr.endOfWord = true;
 		}
+
+		@Override
+		public String toString() {
+			return "Trie [childreen=" + Arrays.toString(childreen) + ", endOfWord=" + endOfWord + "]";
+		}
+		
+		
 	}
 	
 	public void dfs(char[][] board, int i, int j, Set<String> result, Trie trie, String s)

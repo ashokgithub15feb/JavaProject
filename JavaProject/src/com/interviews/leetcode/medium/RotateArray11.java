@@ -16,11 +16,13 @@ public class RotateArray11 {
 	private static void rotateArray(int[] arr, int k) {
 		for(int i=0; i<k ; i++) {
 			rotateArrayByOne(arr, arr.length - 1);
+			System.out.println();
 		}
 	}
 
 	private static void rotateArrayByOne(int[] arr, int len) {
 		int start = 0;
+		System.out.println(Arrays.toString(arr));
 		while(start < len) {
 			int temp = arr[start];
 			arr[start] = arr[start + 1];

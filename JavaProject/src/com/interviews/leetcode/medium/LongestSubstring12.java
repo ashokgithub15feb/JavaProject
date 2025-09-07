@@ -1,7 +1,9 @@
 package com.interviews.leetcode.medium;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class LongestSubstring12 {
 
@@ -45,7 +47,7 @@ public class LongestSubstring12 {
 	
 	private static int longestSunstring(String s) {
 		System.out.println(s);
-		Set<Character> set = new HashSet<>();
+		Set<Character> set = new LinkedHashSet<>();
 
 		int max = 0;
 
@@ -70,7 +72,11 @@ public class LongestSubstring12 {
 				max = len;
 			}
 		}
-
+		
+		System.out.println(set);
+		
+		set.stream().forEach(fs -> System.out.print(String.valueOf(fs)));
+		System.out.println();
 		return max;
 	}
 }
